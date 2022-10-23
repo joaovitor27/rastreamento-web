@@ -1,7 +1,7 @@
 <template>
   <main class="columns is-gapless is-multiline">
-    <div class="column is-1">
-      <BarraLateral></BarraLateral>
+    <div class="column is-2">
+      <BarraLateral style="text-align: center;"></BarraLateral>
     </div>
     <div class="column">
       <MapRastreio></MapRastreio>

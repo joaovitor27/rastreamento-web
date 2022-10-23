@@ -1,8 +1,10 @@
 <template>
-    <GMapMap ref="MapRatreio" :center="markers[0].position" :zoom="16" map-type-id="terrain" style="width: 100%; height: 100vh">
+    <GMapMap ref="MapRatreio" :center="markers[0].position" :zoom="19" map-type-id="terrain" style="width: 100%; height: 100vh">
         
-            <GMapMarker :key="index" v-for="(m, index) in markers" :position="m.position"/>
-        
+            <GMapMarker :key="index" v-for="(m, index) in markers" :position="m.position" :icon="
+                'https://i.postimg.cc/yY7sCnmF/pop-110.png'
+            "/>
+            
     </GMapMap>
 </template>
 
