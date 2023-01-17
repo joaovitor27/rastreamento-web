@@ -5,6 +5,7 @@
                 <img src="../assets/logo_rastramento_jv_fundo_banco.png" alt="">
             </figure>
         </div>
+        <hr>
         <ul class="menu-list" style="text-align:left ;">
             <li><a href="#">
                 <span class="icon-text">
@@ -17,19 +18,19 @@
             <li><a href="#">
                 <span class="icon-text">
                     <span class="icon">
-                        <i class="fas fa-circle-info"></i>
-                    </span>
-                    <span>Ajuda</span>
-                </span>
-            </a></li>
-            <li><a href="#">
-                <span class="icon-text">
-                    <span class="icon">
                         <i class="fas fa-map-location-dot"></i>
                     </span>
                     <span>Rotas do Veículo</span>
                 </span>
             </a></li>
+          <li><a href="#">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-circle-info"></i>
+                    </span>
+                    <span>Ajuda</span>
+                </span>
+          </a></li>
         </ul>
 
     </aside>
