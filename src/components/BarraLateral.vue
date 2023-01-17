@@ -1,14 +1,12 @@
 <template>
-
-
     <aside class="menu">
-        <div class="manu-label" style="text-align: center;">
+        <div class="manu-label" style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
             <figure class="image is-128x128"  style="text-align: center;">
                 <img src="../assets/logo_rastramento_jv_fundo_banco.png" alt="">
             </figure>
         </div>
         <ul class="menu-list" style="text-align:left ;">
-            <li><a href="">
+            <li><a href="#">
                 <span class="icon-text">
                     <span class="icon">
                         <i class="fas fa-lock"></i>
@@ -16,7 +14,7 @@
                     <span>Bloquear Veículo</span>
                 </span>
             </a></li>
-            <li><a href="">
+            <li><a href="#">
                 <span class="icon-text">
                     <span class="icon">
                         <i class="fas fa-circle-info"></i>
@@ -24,7 +22,7 @@
                     <span>Ajuda</span>
                 </span>
             </a></li>
-            <li><a href="">
+            <li><a href="#">
                 <span class="icon-text">
                     <span class="icon">
                         <i class="fas fa-map-location-dot"></i>
@@ -40,10 +38,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-export default defineComponent({
-    name: 'BarraLateral'
-})
+  import { defineComponent } from "vue";
+  export default defineComponent({
+      name: 'BarraLateral'
+  })
 </script>
 
 <style scoped>

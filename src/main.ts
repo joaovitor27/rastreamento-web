@@ -11,4 +11,3 @@ app.use(VueGoogleMaps, {
         key: 'AIzaSyDVmz_J75CPS1gUv0S9JIGxiAwp8wWCrcU',
     },
 }).mount('#app')
-
