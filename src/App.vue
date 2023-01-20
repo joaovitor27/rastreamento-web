@@ -4,19 +4,18 @@
       <BarraLateral style="text-align: center;"></BarraLateral>
     </div>
     <div class="column">
-      <MapRastreio></MapRastreio>
+        <router-view></router-view>
     </div>
   </main>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import {defineComponent} from 'vue';
 import BarraLateral from './components/BarraLateral.vue';
-import MapRastreio from './components/map.vue'
 
 export default defineComponent({
   name: "App",
-  components: { BarraLateral, MapRastreio }
+  components: {BarraLateral}
 });
 </script>
 
