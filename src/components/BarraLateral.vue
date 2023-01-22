@@ -1,5 +1,5 @@
 <template>
-  <aside class="menu">
+  <aside class="menu" id="menu">
     <div class="manu-label" style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
       <router-link to="/">
         <figure class="image is-128x128" style="text-align: center;">
