@@ -15,9 +15,10 @@ library.add(faUserSecret, faRoute, faLock, faMapLocationDot, faCircleInfo, faUse
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(VueGoogleMaps, {
     load: {
-        key: 'AIzaSyDVmz_J75CPS1gUv0S9JIGxiAwp8wWCrcU',
+        key: process.env.VUE_APP_API_KEY_GOOGLE_MAPS,
     },
 })
+console.log(process.env.VUE_APP_API_KEY_GOOGLE_MAPS)
 app.use(store, key)
 app.use(router)
 app.mount('#app')
