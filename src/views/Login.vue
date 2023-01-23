@@ -13,8 +13,6 @@
 import {defineComponent} from "vue";
 import FormLogin from '../components/FormLogin.vue'
 
-document.getElementById('menu')?.remove()
-
 export default defineComponent({
   name: "PageLogin",
   components: {FormLogin}

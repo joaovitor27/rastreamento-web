@@ -12,28 +12,36 @@
       <li>
         <router-link to="/">
           <span class="icon-text">
-            <span class="icon"><font-awesome-icon icon="fa-solid fa-map-location-dot" /></span>
+            <span class="icon"><font-awesome-icon icon="fa-solid fa-map-location-dot"/></span>
             <span>Mapa</span>
           </span>
         </router-link>
       </li>
       <li><a href="#">
         <span class="icon-text">
-          <span class="icon"><font-awesome-icon icon="fa-solid fa-lock" /></span>
+          <span class="icon"><font-awesome-icon icon="fa-solid fa-lock"/></span>
           <span>Bloquear Veículo</span>
         </span>
       </a></li>
       <li><a href="#">
         <span class="icon-text">
-          <span class="icon"><font-awesome-icon icon="fa-solid fa-route" /></span>
+          <span class="icon"><font-awesome-icon icon="fa-solid fa-route"/></span>
           <span>Rotas do Veículo</span>
         </span>
       </a></li>
       <li>
         <router-link to="/ajuda">
           <span class="icon-text">
-            <span class="icon"><font-awesome-icon icon="fa-solid fa-circle-info" /></span>
+            <span class="icon"><font-awesome-icon icon="fa-solid fa-circle-info"/></span>
             <span>Ajuda</span>
+          </span>
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/perfil">
+          <span class="icon-text">
+            <span class="icon"><font-awesome-icon icon="fa-solid fa-user" /></span>
+            <span>Meu Perfil</span>
           </span>
         </router-link>
       </li>
