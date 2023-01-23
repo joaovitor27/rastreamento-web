@@ -18,7 +18,6 @@ app.use(VueGoogleMaps, {
         key: process.env.VUE_APP_API_KEY_GOOGLE_MAPS,
     },
 })
-console.log(process.env.VUE_APP_API_KEY_GOOGLE_MAPS)
 app.use(store, key)
 app.use(router)
 app.mount('#app')
