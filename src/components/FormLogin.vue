@@ -1,13 +1,13 @@
 <template>
-  <form>
+  <form @submit.prevent="submit()">
     <div class="field">
       <div class="control">
-        <input class="input is-medium is-rounded" type="email" placeholder="joao@exemplo.com" autocomplete="username" required />
+        <input class="input is-medium is-rounded" v-model="form.email" type="email" placeholder="joao@exemplo.com" autocomplete="username" required />
       </div>
     </div>
     <div class="field">
       <div class="control">
-        <input class="input is-medium is-rounded" type="password" placeholder="**********" autocomplete="current-password" required />
+        <input class="input is-medium is-rounded" v-model="form.password" type="password" placeholder="**********" autocomplete="current-password" required />
       </div>
     </div>
     <br />
@@ -29,7 +29,18 @@
 import {defineComponent} from "vue";
 
 export default defineComponent({
-  name: 'FormLogin'
+  name: 'FormLogin',
+  data: () => ({
+    form: {
+      email: '',
+      password: ''
+    }
+  }),
+  methods: {
+    submit() {
+      console.log(this.form)
+    }
+  }
 })
 </script>
 
