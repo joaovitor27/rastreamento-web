@@ -58,18 +58,16 @@
 </template>
 
 <script lang="ts">
-import {computed, defineComponent} from "vue";
-import {useStore} from "vuex";
-import {key} from "@/store";
-
+import {defineComponent} from "vue";
+import { perfilStore} from "@/store";
 
 export default defineComponent({
   name: "PagePerfil",
   components: {},
   setup() {
-    const store = useStore(key)
+    const store = perfilStore()
     return {
-      user: computed(() => store.state.user)
+      user: store.state.user
     }
   }
 })

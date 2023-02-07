@@ -9,6 +9,7 @@
   </section>
 </template>
 
+
 <script lang="ts">
 import {defineComponent} from "vue";
 import FormLogin from '../components/FormLogin.vue'
@@ -18,6 +19,8 @@ export default defineComponent({
   components: {FormLogin}
 })
 </script>
+
+
 <style scoped>
 * {
   font-family: 'Nunito Sans', sans-serif;

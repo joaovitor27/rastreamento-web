@@ -1,21 +1,16 @@
 <template>
-  <main class="columns is-gapless is-multiline">
-    <div class="column is-2">
-      <BarraLateral style="text-align: center;"></BarraLateral>
-    </div>
-    <div class="column">
-        <router-view></router-view>
-    </div>
-  </main>
+  <router-view>
+    <PageLogin></PageLogin>
+  </router-view>
 </template>
 
 <script lang="ts">
 import {defineComponent} from 'vue';
-import BarraLateral from './components/BarraLateral.vue';
+import PageLogin from "@/views/Login.vue";
 
 export default defineComponent({
   name: "App",
-  components: {BarraLateral}
+  components: {PageLogin}
 });
 </script>
 

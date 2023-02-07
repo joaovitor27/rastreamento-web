@@ -7,7 +7,7 @@ import router from "@/routes";
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import {faCircleInfo, faLock, faMapLocationDot, faRoute, faUserSecret, faUser} from '@fortawesome/free-solid-svg-icons'
-import {key, store} from "@/store";
+import {key, store, storeLoginUser, keyLoginUser} from "@/store";
 
 
 const app = createApp(App);
@@ -19,5 +19,6 @@ app.use(VueGoogleMaps, {
     },
 })
 app.use(store, key)
+app.use(storeLoginUser, keyLoginUser)
 app.use(router)
 app.mount('#app')

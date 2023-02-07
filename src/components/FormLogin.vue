@@ -2,15 +2,17 @@
   <form @submit.prevent="submit()">
     <div class="field">
       <div class="control">
-        <input class="input is-medium is-rounded" v-model="form.email" type="email" placeholder="joao@exemplo.com" autocomplete="username" required />
+        <input class="input is-medium is-rounded" v-model="form.email" type="email" placeholder="joao@exemplo.com"
+               required/>
       </div>
     </div>
     <div class="field">
       <div class="control">
-        <input class="input is-medium is-rounded" v-model="form.password" type="password" placeholder="**********" autocomplete="current-password" required />
+        <input class="input is-medium is-rounded" v-model="form.password" type="password" placeholder="**********"
+               required/>
       </div>
     </div>
-    <br />
+    <br/>
     <button class="button is-block is-fullwidth is-medium is-rounded color-my-button" type="submit">
       Entrar
     </button>
@@ -27,6 +29,8 @@
 
 <script lang="ts">
 import {defineComponent} from "vue";
+import {loginUserStore} from "@/store";
+import {ACTION_SIGNOUT, ACTIONS_LOGIN} from "@/store/typeActions";
 
 export default defineComponent({
   name: 'FormLogin',
@@ -37,16 +41,29 @@ export default defineComponent({
     }
   }),
   methods: {
-    submit() {
-      console.log(this.form)
+    async submit() {
+      try {
+        await this.store.dispatch(ACTIONS_LOGIN, this.form).then(async response => {
+          console.log('deu certo')
+          await this.$router.push({name: 'HomePage'}).catch((e) => {console.log(e)})
+        })
+      } catch (err) {
+        await this.store.dispatch(ACTION_SIGNOUT)
+        alert(err.data ? err.data.message : 'Não foi possível fazer login')
+      }
+
     }
+  },
+  setup() {
+    const store = loginUserStore()
+    return {store}
   }
 })
 </script>
 
 <style scoped>
 
-.color-my-button{
+.color-my-button {
   background: #0d3b66;
   color: white
 }
